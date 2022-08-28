@@ -1,7 +1,9 @@
 <template>
-  <Navbar :logo="logo_src" :alt="app_name"/>
-  <router-view/>
-  <Footer/>
+  <div id="app">
+    <Navbar :logo="logo_src" :alt="app_name"/>
+    <router-view/>
+    <Footer/>
+  </div>
 </template>
 
 <script>
@@ -40,4 +42,6 @@
     margin-bottom: 30px;
     color: #222;
   }
+
+
 </style>

@@ -11,11 +11,11 @@ export default {
 </script>
 
 <style scoped>
-    #main-banner {
+      #main-banner {
         background-image: url('/public/img/burger.jpg');
         background-position: 100%;
         background-size: cover;
-        height: 750px;
+        height: 500px;
         display: flex;
         align-items: center;
         justify-content: flex-start;
@@ -28,4 +28,4 @@ export default {
         background-color: #222;
         padding: 20px 40px;
     }
-</style>
+</style> 
