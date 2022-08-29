@@ -47,7 +47,7 @@
       },
       {
         "id": 3,
-        "tipo": "Salame"
+        "tipo": "Lombinho"
       },
       {
         "id": 4,
@@ -60,6 +60,14 @@
       {
         "id": 6,
         "tipo": "Pepino"
+      },
+      {
+        "id": 7,
+        "tipo": "Mussarella"
+      },
+      {
+        "id": 8,
+        "tipo": "Picles"
       }
     ]
   },
@@ -77,43 +85,5 @@
       "tipo": "Finalizado"
     }
   ],
-  "burgers": [
-    {
-      "nome": "Luiz Fernando Onofre",
-      "carne": "Maminha",
-      "pao": "Italiano Branco",
-      "opcionais": [
-        "Salame",
-        "Cebola roxa",
-        "Tomate",
-        "Cheddar"
-      ],
-      "status": "Solicitado",
-      "id": 1
-    },
-    {
-      "nome": "Mayara Duarte Nunes Onofre",
-      "carne": "Alcatra",
-      "pao": "3 Queijos",
-      "opcionais": [
-        "Cheddar",
-        "Tomate",
-        "Pepino",
-        "Cebola roxa",
-        "Bacon"
-      ],
-      "status": "Solicitado",
-      "id": 2
-    },
-    {
-      "nome": "Onofre",
-      "carne": "Veggie burger",
-      "pao": "Parmesão e Orégano",
-      "opcionais": [
-        "Tomate"
-      ],
-      "status": "Solicitado",
-      "id": 3
-    }
-  ]
+  "burgers": []
 }
