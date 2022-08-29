@@ -24,8 +24,10 @@ export default {
     #main-banner h1 {
         color: #FFF;
         text-align: center;
-        font-size: 60px;
-        background-color: #222;
+        font-size: 50px;
+        background: transparent;
+        border: 4px solid black;
         padding: 20px 40px;
+        margin: -200px 10px;
     }
 </style> 
