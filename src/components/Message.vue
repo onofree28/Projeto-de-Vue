@@ -15,6 +15,7 @@ export default {
 
 <style scoped>
     .message-container {
+        text-align: center;
         color: #004085;
         background-color: #CCE5FF;
         border: 2px solid #88daff;

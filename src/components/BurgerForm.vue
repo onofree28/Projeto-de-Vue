@@ -93,10 +93,10 @@ export default {
             setTimeout(() => this.msg = "", 3000)
             
             //limpar os campos
-            this.nome = ""
-            this.carne = ""
-            this.pao = ""
-            this.opcionais = ""
+            this.nome = null
+            this.carne = null
+            this.pao = null
+            this.opcionais = []
         }
     },
     mounted() {

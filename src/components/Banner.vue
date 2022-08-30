@@ -28,6 +28,6 @@ export default {
         background: transparent;
         border: 4px solid black;
         padding: 20px 40px;
-        margin: -200px 10px;
+        margin: 50px 10px;
     }
 </style> 
