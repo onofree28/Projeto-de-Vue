@@ -144,20 +144,6 @@
       "id": 4
     },
     {
-      "nome": "Maria",
-      "carne": "Picanha",
-      "pao": "Parmesão e Orégano",
-      "opcionais": [
-        "Lombinho",
-        "Cebola roxa",
-        "Cheddar",
-        "Pepino",
-        "Picles"
-      ],
-      "status": "Finalizado",
-      "id": 5
-    },
-    {
       "nome": "Clara",
       "carne": "Maminha",
       "pao": "Integral",
@@ -169,6 +155,44 @@
       ],
       "status": "Finalizado",
       "id": 6
+    },
+    {
+      "nome": "Maria",
+      "carne": "Veggie burger",
+      "pao": "Integral",
+      "opcionais": [
+        "Tomate",
+        "Pepino",
+        "Picles",
+        "Cebola roxa"
+      ],
+      "status": "Em produção",
+      "id": 7
+    },
+    {
+      "nome": "Wallyson",
+      "carne": "Alcatra",
+      "pao": "3 Queijos",
+      "opcionais": [
+        "Tomate",
+        "Cheddar",
+        "Pepino",
+        "Cebola roxa",
+        "Mussarella",
+        "Lombinho"
+      ],
+      "status": "Em produção",
+      "id": 8
+    },
+    {
+      "nome": "Pedro",
+      "carne": "Picanha",
+      "pao": "Parmesão e Orégano",
+      "opcionais": [
+        "Bacon"
+      ],
+      "status": "Em produção",
+      "id": 9
     }
   ]
 }

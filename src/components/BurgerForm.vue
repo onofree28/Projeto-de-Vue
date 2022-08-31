@@ -4,25 +4,25 @@
         <div>
             <form id="burger-form" @submit="createBurger">
                 <div class="input-container">
-                    <label for="nome">Nome do cliente:</label>
+                    <label class="label-title" for="nome">Nome do cliente:</label>
                     <input type="text" id="nome" name="nome" v-model="nome" placeholder="Digite o seu nome">
                 </div>
                 <div class="input-container">
-                    <label for="pao">Escolha o pão:</label>
-                    <select name="pao" id="pao" v-model="pao">
-                        <option value="">Selecione o seu pão</option>
-                        <option v-for="pao in paes" :key="pao.id" :value="pao.tipo">{{ pao.tipo }}</option>
-                    </select>  
-                </div>
-                <div id="opcionais-container" class="input-container">
-                    <label for="carne">Escolha a carne do seu Burger:</label>
-                    <select name="carne" id="carne" v-model="carne">
-                        <option value="">Selecione o tipo de carne</option>
-                        <option v-for="carne in carnes" :key="carne.id" :value="carne.tipo">{{ carne.tipo }}</option>
-                    </select>  
+                    <label class="label-title" id="ingredients-title" for="pao">Escolha o pão:</label>
+                    <label class="checkbox-container" v-for="pao in paesdata" :key="pao.id">
+                        <input type="radio" name="paes" v-model="paes" :value="pao.tipo">
+                        <span>{{ pao.tipo }}</span>
+                    </label> 
                 </div>
                 <div class="input-container">
-                    <label id="opcionais-title" for="opcionais">Selecione os opcionais:</label>
+                    <label class="label-title" id="ingredients-title" for="carne">Escolha a carne do seu Burger:</label>
+                    <label class="checkbox-container" v-for="carne in carnesdata" :key="carne.id">
+                        <input type="radio" name="carnes" v-model="carnes" :value="carne.tipo">
+                        <span>{{ carne.tipo }}</span>
+                    </label>
+                </div> 
+                <div class="input-container">
+                    <label class="label-title" id="ingredients-title" for="opcionais">Selecione os opcionais:</label>
                     <div class="checkbox-container" v-for="opcional in opcionaisdata" :key="opcional.id">
                         <input type="checkbox" name="opcionais" v-model="opcionais" :value="opcional.tipo">
                         <span>{{ opcional.tipo }}</span>
@@ -42,12 +42,12 @@ export default {
     name: 'BurgerForm',
     data() {
         return {
-            paes: null,
-            carnes: null,
+            paesdata: null,
+            carnesdata: null,
             opcionaisdata: null,
-            nome: null,
-            pao: null,
-            carne: null,
+            nome: '',
+            pao: '',
+            carne: '',
             opcionais: [],
             status: 'Solicitado',
             msg: null
@@ -59,8 +59,8 @@ export default {
             const req = await fetch("http://localhost:3000/ingredientes")
             const data = await req.json()
 
-            this.paes = data.paes
-            this.carnes = data.carnes
+            this.paesdata = data.paes
+            this.carnesdata = data.carnes
             this.opcionaisdata = data.opcionais
 
         },
@@ -71,8 +71,8 @@ export default {
 
             const data = {
                 nome: this.nome,
-                carne: this.carne,
-                pao: this.pao,
+                carne: this.carnes,
+                pao: this.paes,
                 opcionais: Array.from(this.opcionais),
                 status: "Solicitado"
             }
@@ -93,9 +93,9 @@ export default {
             setTimeout(() => this.msg = "", 3000)
             
             //limpar os campos
-            this.nome = null
-            this.carne = null
-            this.pao = null
+            this.nome = ""
+            this.carne = undefined
+            this.pao = undefined
             this.opcionais = []
         }
     },
@@ -121,7 +121,7 @@ export default {
         margin-bottom: 20px;
     }
 
-    label {
+    .label-title {
         font-weight: bold;
         margin-bottom: 15px;
         color: #222;
@@ -129,9 +129,10 @@ export default {
         border-left: 4px solid #fcba03;
     }
 
-    input, select {
+    input {
         padding: 5px 10px;
         width: 300px;
+        cursor: pointer;
     }
 
     #opcionais-container {
@@ -139,7 +140,7 @@ export default {
         flex-wrap: wrap;
     }
 
-    #opcionais-title {
+    #ingredients-title {
         width: 100%;
     }
 
