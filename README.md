@@ -1,4 +1,4 @@
-# make_your_burguer
+# make_your_burger
 
 ## Project setup
 ```
@@ -15,5 +15,9 @@ npm run serve
 npm run build
 ```
 
+### Run backend
+```
+npm run backend
+```
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
